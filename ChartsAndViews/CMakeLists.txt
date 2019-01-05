@@ -6,7 +6,7 @@ file(GLOB SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 	"*.cpp"
 )
 
-list(REMOVE_ITEM SOURCES "ChartsAndViews.cpp")
+list(REMOVE_ITEM SOURCES "${PROJECT_NAME}.cpp")
 
 SET(CMAKE_CXX_FLAGS "-std=c++17")
 
