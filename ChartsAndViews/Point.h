@@ -16,5 +16,5 @@ public:
 	Point(int x, int y);
 	~Point();
 
-	bool IsInsideChart(Chart);
+	bool IsInsideChart(const Chart&) const;
 };

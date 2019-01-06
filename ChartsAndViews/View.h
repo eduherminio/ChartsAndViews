@@ -13,10 +13,10 @@ public:
 	Color color;
 
 	View();
-	bool DoChartsOverlap(); // OK, valid only for max_size=2
-	Color GetColor(int x, int y);
+	bool DoChartsOverlap() const; // OK, valid only for max_size=2
+	Color GetColor(int x, int y) const;
 
 private:
 	const Color _defaultColor = Color(1, 2, 3);
-	Color GetColor(Point point);
+	Color GetColor(const Point& point) const;
 };

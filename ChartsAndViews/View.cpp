@@ -12,7 +12,7 @@ View::View()
 {}
 
 /// Using ranges rather than '>' and '<'
-bool View::DoChartsOverlap() // OK, valid only for max_size=2
+bool View::DoChartsOverlap() const // OK, valid only for max_size=2
 {
 	if (charts.size() != max_size)
 	{
@@ -31,12 +31,12 @@ bool View::DoChartsOverlap() // OK, valid only for max_size=2
 			|| yVector.end() != std::find(yVector.begin(), yVector.end(), charts[0].bottomRight.y));
 };
 
-Color View::GetColor(int x, int y)
+Color View::GetColor(int x, int y) const
 {
 	return GetColor(Point(x, y));
 }
 
-Color View::GetColor(Point point) {
+Color View::GetColor(const Point& point) const {
 	std::vector<int> chartsIndexes;
 
 	for (size_t i = 0; i < charts.size(); ++i)

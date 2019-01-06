@@ -13,7 +13,7 @@ Point::Point(int x, int y)
 {}
 
 /// Using ranges rather than '>' and '<'
-bool Point::IsInsideChart(Chart chart)
+bool Point::IsInsideChart(const Chart& chart) const
 {
 	std::vector<int> xVector(std::abs(chart.topLeft.x - chart.bottomRight.x) + 1);
 	std::vector<int> yVector(std::abs(chart.topLeft.y - chart.bottomRight.y) + 1);
